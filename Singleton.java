@@ -24,10 +24,11 @@ public class Singleton {
     }
 }
 class Cache{
-	private static List<String> l = new ArrayList<String>();
+	private static List<String> l;
 	private String value;
 	private static Cache cacheInstance;
 	private Cache(){	
+		l = new ArrayList<String>();
 	}
 	public static Cache getCacheInstance(){
 		 synchronized(Cache.class){
